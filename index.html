@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="print.css" media="print"> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="colorPlate"><i class="fas fa-palette"></i></div>
+
+      <section class="tools-board">
+        <div class="row">
+          <label for="" class="title">Shapes</label>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <img src="img/square.svg" alt="" />
+              <span>Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <img
+                src="https://www.svgrepo.com/show/135058/circle-outline.svg"
+                alt=""
+              />
+              <span>Circle</span>
+            </li>
+            <li class="option tool" id="triangle">
+              <img src="img/triangle.svg" alt="" />
+              <span>Triangle</span>
+            </li>
+            <li class="option">
+              <input type="checkbox" name="" id="fill" />
+              <label for="fill">Fill-Color</label>
+            </li>
+            <li class="option" id="transparent">
+              <input type="checkbox" name="" id="transparency" />
+              <label for="transparency">
+                Transparency
+                <!-- <i class="fab fa-uniregistry"></i>  -->
+              </label>
+              <input
+                type="range"
+                name=""
+                id="transparent-slider"
+                min="0"
+                max="10"
+                value="4"
+                disabled="true"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <label for="" class="title">Options</label>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Paint_Brush_-_The_Noun_Project.svg/1024px-Paint_Brush_-_The_Noun_Project.svg.png"
+                alt=""
+              />
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="img/eraser-svgrepo-com.svg" alt="" />
+              <span>Eraser</span>
+            </li>
+            <li class="option tool" id="">
+              <input
+                type="range"
+                name=""
+                id="size-slider"
+                min="0.5"
+                max="50"
+                value="1"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label for="" class="title">Colors</label>
+          <ul class="options">
+            <li class="option">
+              <input type="color" id="color-picker" value="#000000" />
+            </li>
+            <li class="option selected">
+              <input type="color" id="color-picker" value="#ffffff" />
+            </li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#e02020" />
+            </li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#6dd400" />
+            </li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4a98f7" />
+            </li>
+          </ul>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Clear Canvas</button>
+          <button class="save-img">Save As Img</button>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
